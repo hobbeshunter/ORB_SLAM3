@@ -223,7 +223,7 @@ void LocalMapping::Run()
 
             std::chrono::steady_clock::time_point t7 = std::chrono::steady_clock::now();
 
-            mpLoopCloser->InsertKeyFrame(mpCurrentKeyFrame);
+            if(mpLoopCloser) mpLoopCloser->InsertKeyFrame(mpCurrentKeyFrame);
             std::chrono::steady_clock::time_point t8 = std::chrono::steady_clock::now();
 
             double t_procKF = std::chrono::duration_cast<std::chrono::duration<double,std::milli> >(t1 - t0).count();

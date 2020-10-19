@@ -54,7 +54,7 @@ namespace g2o {
     public:
     typedef T EstimateType;
     typedef std::stack<EstimateType, 
-                       std::vector<EstimateType,  Eigen::aligned_allocator<EstimateType> > >
+                       std::vector<EstimateType, Eigen::aligned_allocator<EstimateType> > >
     BackupStackType;
 
     static const int Dimension = D;           ///< dimension of the estimate (minimal) in the manifold space
